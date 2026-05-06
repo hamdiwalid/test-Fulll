@@ -159,8 +159,7 @@ npm start
 
 - **ESLint** — [.eslintrc.cjs](.eslintrc.cjs) (config recommandée + compatibilité Prettier).
 - **Prettier** — [.prettierrc.json](.prettierrc.json).
-- **Husky + lint-staged** — hook [pre-commit](.husky/pre-commit) qui lance `lint-staged` (eslint + prettier sur les fichiers stagés) puis `npm test`.
-- **GitHub Actions** — [.github/workflows/ci.yml](.github/workflows/ci.yml) : install → lint → test → test:bdd à chaque push / PR.
+- **Husky + lint-staged** — hook pre-commit (situé à la racine du repo : `.husky/pre-commit`) qui lance `lint-staged` (eslint + prettier sur les fichiers stagés) puis `npm test`.
 
 Scripts disponibles : `npm run lint`, `npm run lint:fix`, `npm run format`, `npm run format:check`.
 

@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+# Le projet Node est dans Backend/, on s'y place avant lint-staged + tests.
+cd "$(dirname -- "$0")/../Backend" || exit 1
+
+npx lint-staged && npm test
