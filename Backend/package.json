@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js",
+    "test:bdd": "cucumber-js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "ddd",
+    "cqrs",
+    "graphql",
+    "fleet"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "express": "^4.19.2",
+    "graphql": "^16.13.2",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.6.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
